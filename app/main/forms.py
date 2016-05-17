@@ -14,3 +14,5 @@ class PolicyForm(Form):
     user = StringField('User')
     submit = SubmitField('Submit')
 
+class UserForm(Form):
+    pass

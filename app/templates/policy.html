@@ -4,5 +4,7 @@
 {% block is_policy_active %}class='active'{% endblock %}
 
 {% block page_content %}
+    <div class="col-md-6">
     {{ wtf.quick_form(form) }}
+    </div>
 {% endblock %}

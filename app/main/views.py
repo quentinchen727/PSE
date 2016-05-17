@@ -12,6 +12,7 @@ def index():
 def policy():
     form = PolicyForm()
     form.location_id.choices = [('a','1')]  # !!!!!!!!!!!
+    form.event_type.choices = [('a', 'Enter'), ('b', 'Leave')]
     # form.group_id.choices = [(g.id, g.name) for g in Group.query.order_by('name')]
 
     return render_template('policy.html', form=form)

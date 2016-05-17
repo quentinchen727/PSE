@@ -1,7 +1,8 @@
 {% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 
 {% block is_policy_active %}class='active'{% endblock %}
 
 {% block page_content %}
-
+    {{ wtf.quick_form(form) }}
 {% endblock %}

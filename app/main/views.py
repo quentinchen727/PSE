@@ -1,4 +1,5 @@
 from . import main
+from .forms import PolicyForm
 from flask import render_template, redirect, session, url_for
 
 
@@ -9,7 +10,11 @@ def index():
 
 @main.route('/policy', methods=['GET','POST'])
 def policy():
-    return render_template('policy.html')
+    form = PolicyForm()
+    form.location_id.choices = [('a','1')]  # !!!!!!!!!!!
+    # form.group_id.choices = [(g.id, g.name) for g in Group.query.order_by('name')]
+
+    return render_template('policy.html', form=form)
 
 
 @main.route('/user', methods=['GET','POST'])

@@ -25,9 +25,8 @@ class ProductionConfig(Config):
     pass
 
 config = {
-    'development':DevelopmentConfig,
+    'development': DevelopmentConfig,
     'testing': TestingConfig,
     'production': ProductionConfig,
-
     'default': DevelopmentConfig
 }
